@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
 
+## For adding to the existing project
+
+Install these dependencies
+
+```
+$ npm install --save-dev eslint eslint-plugin-import @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser
+
+```
+
+Copy the following files
+
+- .eslintrc.json
+- .prettierrc.js
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
