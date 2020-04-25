@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Install these dependencies
 
 ```
-$ npm install --save-dev eslint eslint-plugin-import @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser
+$ npm install --save-dev eslint eslint-plugin-import @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged
 
 ```
 
@@ -15,6 +15,34 @@ Copy the following files
 
 - .eslintrc.json
 - .prettierrc.js
+
+Add the following command to the scripts.
+
+```
+"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+```
+
+Add the following code to the `package.json` file.
+
+```
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.{js,ts,tsx}": [
+    "eslint --fix"
+  ]
+}
+```
+
+Finally copy the code from `.vscode > settings.json` vscode settings for auto format on save. And add the following extenstions to the vs code.
+
+```
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+```
 
 ## Development server
 
