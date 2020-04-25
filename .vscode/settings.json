@@ -13,6 +13,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
 }
-// Need to install these plugins
+// Need to install these plugins on vs code
 // dbaeumer.vscode-eslint
 // esbenp.prettier-vscode
