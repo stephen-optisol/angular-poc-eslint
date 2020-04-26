@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Install these dependencies
 
 ```
-$ npm install --save-dev eslint eslint-plugin-import @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged
+$ npm install --save-dev eslint eslint-plugin-import eslint-plugin-json @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged
 
 ```
 
