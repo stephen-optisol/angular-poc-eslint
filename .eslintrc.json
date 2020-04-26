@@ -38,6 +38,15 @@
         "allowComments": true
       }
     ],
+    "no-console": [
+      "error", // will not allow the console.log
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-use-before-define": "off"
   }
