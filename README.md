@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Install these dependencies
 
 ```
-$ npm install --save-dev eslint eslint-plugin-import eslint-plugin-json @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged
+$ npm install --save-dev eslint eslint-plugin-import eslint-plugin-json @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged nodemon npm-run-all stylelint stylelint-scss
 
 ```
 
@@ -15,6 +15,7 @@ Copy the following files
 
 - .eslintrc.json
 - .prettierrc.js
+- .stylelintrc.json
 
 Add the following command to the scripts.
 
