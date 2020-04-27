@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'poc-angular';
   user() {
-    let a: int[] = [1, 2, 3, 4];
+    let a: any[] = [1, 2, 3, 4];
     a = a.map((aa) => aa * 4);
     return a;
   }
