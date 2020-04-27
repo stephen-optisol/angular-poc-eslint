@@ -20,7 +20,11 @@ Copy the following files
 Add the following command to the scripts.
 
 ```
-"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+"lint": "npm run lint:css && npm run lint:js",
+"lint:css": "stylelint '*/**/*.scss' --color --fix",
+"lint:js": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+"lint:watch": "nodemon -e ts,js,scss -x npm run lint",
+"dev": "npm-run-all --parallel lint:watch start"
 ```
 
 Add the following code to the `package.json` file.
