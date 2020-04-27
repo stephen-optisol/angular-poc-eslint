@@ -20,9 +20,9 @@ Copy the following files
 Add the following command to the scripts.
 
 ```
-"lint": "npm run lint:css && npm run lint:js",
+"lint": "npm-run-all --parallel lint:css lint:ts",
 "lint:css": "stylelint '*/**/*.scss' --color --fix",
-"lint:js": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+"lint:ts": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
 "lint:watch": "nodemon -e ts,js,scss -x npm run lint",
 "dev": "npm-run-all --parallel lint:watch start"
 ```
