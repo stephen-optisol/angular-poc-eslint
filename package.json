@@ -7,8 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "e2e": "ng e2e",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "lint:watch": "nodemon -e ts,html,scss -x npm run lint",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint '*/**/*.scss' --color --fix",
+    "lint:js": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+    "lint:watch": "nodemon -e ts,js,scss -x npm run lint",
     "dev": "npm-run-all --parallel lint:watch start"
   },
   "private": true,
@@ -54,6 +56,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "protractor": "~5.4.0",
+    "stylelint": "^13.3.3",
+    "stylelint-scss": "^3.17.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
