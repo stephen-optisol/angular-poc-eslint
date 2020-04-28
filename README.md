@@ -21,8 +21,8 @@ Add the following command to the scripts.
 
 ```
 "lint": "npm-run-all --parallel lint:css lint:ts",
-"lint:css": "stylelint '*/**/*.scss' --color --fix",
-"lint:ts": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+"lint:css": "stylelint --color --fix \"**/*.scss\"",
+"lint:ts": "eslint --color --quiet --fix --ext .js,.ts .",
 "lint:watch": "nodemon -e ts,js,scss -x npm run lint",
 "dev": "npm-run-all --parallel lint:watch start"
 ```
