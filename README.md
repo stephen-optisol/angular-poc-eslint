@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Install these dependencies
 
 ```
-$ npm install --save-dev eslint eslint-plugin-import eslint-plugin-json @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier @typescript-eslint/parser husky lint-staged nodemon npm-run-all stylelint stylelint-scss
+$ npm install --save-dev eslint eslint-plugin-import eslint-plugin-json @typescript-eslint/eslint-plugin prettier eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser husky lint-staged nodemon npm-run-all stylelint stylelint-scss
 
 ```
 
@@ -20,7 +20,11 @@ Copy the following files
 Add the following command to the scripts.
 
 ```
-"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+"lint": "npm-run-all --parallel lint:css lint:ts",
+"lint:css": "stylelint '*/**/*.scss' --color --fix",
+"lint:ts": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+"lint:watch": "nodemon -e ts,js,scss -x npm run lint",
+"dev": "npm-run-all --parallel lint:watch start"
 ```
 
 Add the following code to the `package.json` file.
