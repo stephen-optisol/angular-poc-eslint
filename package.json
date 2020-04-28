@@ -7,9 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "e2e": "ng e2e",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint '*/**/*.scss' --color --fix",
-    "lint:js": "eslint '*/**/*.{js,ts,tsx}' --color  --quiet --fix",
+    "lint": "npm-run-all --parallel lint:css lint:ts",
+    "lint:css": "stylelint --color --fix \"**/*.scss\"",
+    "lint:ts": "eslint --color --quiet --fix --ext .js,.ts .",
     "lint:watch": "nodemon -e ts,js,scss -x npm run lint",
     "dev": "npm-run-all --parallel lint:watch start"
   },
